@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  ubuntu:
+    build:
+      context: ./
+    image: vivasa/ubuntu
+    container_name: ubuntum
+    hostname: ubuntum
+    environment:
+      TERM: xterm-256color
+    # command: /bin/bash
+    ports:
+      - "80"
+    tty: true
