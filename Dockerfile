@@ -13,3 +13,7 @@ RUN apt-get install -y less libpq-dev python3-pip python3-setuptools --no-instal
 RUN pip3 install psycopg2-binary
 
 RUN usermod --shell /bin/zsh root
+
+#Personalized zshrc for root
+ADD config/zshrc /root/.zshrc
+
