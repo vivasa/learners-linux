@@ -14,6 +14,12 @@ RUN pip3 install psycopg2-binary
 
 RUN usermod --shell /bin/zsh root
 
+# Install SDKMAN that allows us to install Java frameworks like maven, gradle, grails etc
+RUN curl -s "https://get.sdkman.io" | bash
+
+RUN echo 'sdkman_curl_connect_timeout=30'  >> "$HOME/.sdkman/etc/config"
+RUN echo 'sdkman_curl_max_time=0'  >> "$HOME/.sdkman/etc/config"
+
 #Personalized zshrc for root
 ADD config/zshrc /root/.zshrc
 
