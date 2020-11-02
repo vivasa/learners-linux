@@ -1,2 +1,2 @@
-# learners-ubuntu
-Ubuntu tools for beginners
+# learners-linux
+Linux configured for beginners
