@@ -2,8 +2,6 @@
 
 An opinionated personalisation of Ubuntu image for making a beginner's experience pleasant.
 
-> Source code for building this image can be found [here](https://github.com/vivasa/learners-linux)
-
 ## Steps to work with this image
 1. Pull this docker image: `docker pull vivasa/ubuntu:latest`
 2. Create a file in any folder of your choice and name it as `docker-compose.yml`
