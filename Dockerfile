@@ -6,7 +6,7 @@ ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils net-tools dnsutils \
-    curl git zip apt-utils sudo wget unzip locales software-properties-common tmux zsh screen --no-install-recommends
+    curl git zip apt-utils sudo wget unzip locales software-properties-common tmux zsh screen nginx --no-install-recommends
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 

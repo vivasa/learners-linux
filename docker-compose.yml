@@ -9,7 +9,9 @@ services:
     hostname: ubuntum
     environment:
       TERM: xterm-256color
-    # command: /bin/bash
+    volumes:
+      - ./config/startup.sh:/root/startup.sh
+    command: /root/startup.sh
     ports:
       - "80"
     tty: true

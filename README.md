@@ -1,2 +1,3 @@
 # learners-ubuntu
-Ubuntu tools for beginners
+
+Opinionated configuration/personalization of Ubuntu tools for beginners
