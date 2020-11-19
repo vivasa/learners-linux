@@ -22,6 +22,16 @@ RUN curl -s "https://get.sdkman.io" | bash
 RUN echo 'sdkman_curl_connect_timeout=30'  >> "$HOME/.sdkman/etc/config"
 RUN echo 'sdkman_curl_max_time=0'  >> "$HOME/.sdkman/etc/config"
 
+RUN apt-get install -y openssh-client
+
+RUN rm -rf /var/www/html
+RUN echo 'buffer.....'
+RUN git clone https://github.com/vivasa/wiki.git -b master --single-branch --depth 1 /var/www/html
+
 #Personalized zshrc for root
 ADD config/zshrc /root/.zshrc
+ADD config/welcome /root/welcome
+ADD config/startup.sh /root/startup.sh
+ADD config/nginx.conf /etc/nginx/sites-available/default
 
+CMD ["/root/startup.sh"]
