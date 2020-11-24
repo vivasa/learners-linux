@@ -1,3 +1,3 @@
-# learners-ubuntu
+# Linux for beginners
 
-Opinionated configuration/personalization of Ubuntu tools for beginners
+An opinionated personalisation of Ubuntu image for making a beginner's experience pleasant.
