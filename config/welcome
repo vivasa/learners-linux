@@ -1,0 +1,7 @@
+Congratulations! You are now running the container successfully. 
+To view ports opened by this container:
+    docker ps
+
+To attach to the shell inside the container:
+    docker exec -it ubuntum /bin/zsh
+

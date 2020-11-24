@@ -2,4 +2,4 @@
 
 sudo service nginx start
 
-tail -f /root/startup.sh
+tail -f /root/welcome
