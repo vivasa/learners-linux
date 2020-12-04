@@ -12,7 +12,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh
 
 RUN apt-get install -y less libpq-dev python3-pip python3-setuptools vim --no-install-recommends
 
-RUN pip3 install psycopg2-binary questionary pipenv rule-engine
+RUN pip3 install psycopg2-binary questionary pipenv rule-engine kazoo python_dotenv
 
 RUN usermod --shell /bin/zsh root
 
@@ -25,7 +25,7 @@ RUN echo 'sdkman_curl_max_time=0'  >> "$HOME/.sdkman/etc/config"
 RUN apt-get install -y openssh-client
 
 RUN rm -rf /var/www/html
-RUN echo 'buffer.....'
+RUN echo 'buffer.......'
 RUN git clone https://github.com/vivasa/wiki.git -b master --single-branch --depth 1 /var/www/html
 
 #Personalized zshrc for root
