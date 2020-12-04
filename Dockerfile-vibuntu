@@ -1,0 +1,23 @@
+FROM vivasa/ubuntu:latest
+LABEL author="Harikishore Tadigotla<harikishore@vivasa.in>"
+
+ENV TERM xterm-256color
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
+
+RUN usermod --shell /bin/zsh root
+
+RUN rm -rf /var/www/html
+RUN echo 'buffer.....'
+RUN git clone https://github.com/vivasa/wiki.git -b master --single-branch --depth 1 /var/www/html
+
+#Personalized zshrc for root
+ADD config/zshrc /root/.zshrc
+ADD config/welcome /root/welcome
+ADD config/startup.sh /root/startup.sh
+ADD config/nginx.conf /etc/nginx/sites-available/default
+ADD config/client/start.sh /root/config/start.sh
+ADD config/client/composea.yml /root/config/composea.yml
+ADD config/starta.sh /root/config/starta.sh
+
+CMD ["/root/startup.sh"]

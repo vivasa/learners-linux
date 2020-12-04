@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  vibuntu:
+    image: vivasa/learners_ubuntu
+    container_name: vibuntu
+    hostname: vibuntu
+    environment:
+      TERM: xterm-256color
+    command: /root/config/starta.sh
+    volumes:
+      - ${WORK_DIR}:/root/sources
+    ports:
+      - "80"
+    tty: true

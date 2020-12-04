@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  ubuntu:
+    build:
+      context: ./Dockerfile-vibuntu
+    image: vivasa/learners_ubuntu
+    container_name: vibuntu
+    hostname: vibuntu
+    environment:
+      TERM: xterm-256color
+    #volumes:
+    #  - ./config/startup.sh:/root/startup.sh
+    #command: /root/startup.sh
+    ports:
+      - "80"
+    tty: true
