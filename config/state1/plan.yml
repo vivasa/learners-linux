@@ -2,12 +2,12 @@ version: '3.5'
 
 services:
   vibuntu:
-    image: vivasa/learners_ubuntu
+    image: vivasa/ubuntu:learn
     container_name: vibuntu
     hostname: vibuntu
     environment:
       TERM: xterm-256color
-    command: /root/config/starta.sh
+    command: /root/config/state2/launch.sh
     volumes:
       - ${WORK_DIR}:/root/sources
     ports:

@@ -1,9 +1,10 @@
 version: '3.5'
 
 services:
-  ubuntu:
+  vibuntu:
     build:
-      context: ./Dockerfile-vibuntu
+      context: .
+      dockerfile: Dockerfile-vibuntu
     image: vivasa/learners_ubuntu
     container_name: vibuntu
     hostname: vibuntu

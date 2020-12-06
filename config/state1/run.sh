@@ -2,4 +2,4 @@
 
 echo "WORK_DIR=$HOME/.vibuntu" > .env
 
-docker-compose -f ./composea.yml up -d
+docker-compose -f ./plan.yml up -d
