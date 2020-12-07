@@ -33,11 +33,8 @@ ADD config/here/zshrc /root/.zshrc
 ADD config/here/welcome /root/welcome
 ADD config/here/nginx.conf /etc/nginx/sites-available/default
 
-ADD config/state0/startup.sh /root/config/state0/startup.sh
+ADD config /root/config
 
-ADD config/state1/plan.yml /root/config/state1/plan.yml
-ADD config/state1/run.sh /root/config/state1/run.sh
-
-ADD config/state2/launch.sh /root/config/state2/launch.sh
+# VOLUME ["/vibuntu"]
 
 CMD ["/root/config/state0/startup.sh"]
