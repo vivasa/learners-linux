@@ -1,9 +1,14 @@
 version: '3.5'
 
 services:
+  kernel:
+    build:
+      context: ./
+    image: vivasa/ubuntu:kernel
   ubuntu:
     build:
       context: ./
+      dockerfile: ./Dockerfile_learn
     image: vivasa/ubuntu:learn
     container_name: ubuntum
     hostname: ubuntum
