@@ -7,8 +7,8 @@ services:
     image: vivasa/ubuntu:kernel
   ubuntu:
     build:
-      context: ./
-      dockerfile: ./Dockerfile_learn
+      context: ./ubuntu
+      dockerfile: ./Dockerfile
     image: vivasa/ubuntu:learn
     container_name: ubuntum
     hostname: ubuntum
