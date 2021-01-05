@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils net-t
 
 RUN apt-get install -y less libpq-dev python3-pip python3-setuptools vim --no-install-recommends
 
-RUN apt-get install -y openssh-client gpg-agent --no-install-recommends
+RUN apt-get install -y openssh-client gpg-agent --no-install-recommends dos2unix
 
 # Create the file repository configuration:
 RUN sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
